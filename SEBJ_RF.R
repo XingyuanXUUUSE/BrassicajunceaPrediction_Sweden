@@ -30,7 +30,8 @@ Mean_OptRF
 prRF <- predict(BIO, RF_eval)
 par(mfrow=c(1,2))
 plot(prRF, main='Random Forest Prediction')
-plot(prRF > Mean_OptRF, main='presence/absence')
+prPRF <- prRF > Mean_OptRF
+plot(prPRF, main='presence/absence')
 
 output_folder <- "RF_Output"
 
@@ -42,4 +43,4 @@ output_file_1 <- file.path(output_folder, "PrRF_P.tif")
 output_file_2 <- file.path(output_folder, "PrRF_PA.tif")
 
 writeRaster(prRF, filename=output_file_1, format="GTiff")
-writeRaster(prRF > Mean_OptRF, filename=output_file_2, format="GTiff")
+writeRaster(prPRF, filename=output_file_2, format="GTiff")
