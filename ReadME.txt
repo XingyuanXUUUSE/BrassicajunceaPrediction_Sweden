@@ -18,6 +18,8 @@ Then you can run BioClim/GLM/MaxEnt/RF for species prediction!
 
 The Bias Control is based on Zizka 2021, to see the extent and factors that affecting the bias.
 
+Also, the major part of these codes have referenced Matthew Dennis from the University of Manchester, United Kingdom.
+
 Good luck with your project!!
 
 Xingyuan Xu Bachelor of Science
