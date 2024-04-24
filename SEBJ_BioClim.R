@@ -33,6 +33,7 @@ bc_K
 prBIO <- predict(BIO, bc_bradypus_K,type = "response")
 par(mfrow=c(1,2))
 plot(prBIO, main='BIO_K')
+prPBIO <- prBIO > Mean_OptBIO
 plot(prBIO > Mean_OptBIO, main='presence/absence')
 
 output_folder <- "BioClim_Output"
@@ -44,5 +45,5 @@ if (!file.exists(output_folder)) {
 output_file_1 <- file.path(output_folder, "PrBIO_P.tif")
 output_file_2 <- file.path(output_folder, "PrBIO_PA.tif")
 
-writeRaster(prRF, filename=output_file_1, format="GTiff")
-writeRaster(prRF > Mean_OptRF, filename=output_file_2, format="GTiff")
+writeRaster(prBIO, filename=output_file_1, format="GTiff")
+writeRaster(prPBIO, filename=output_file_2, format="GTiff")
