@@ -46,6 +46,6 @@ if (!file.exists(output_folder)) {
 output_file_1 <- file.path(output_folder, "PrGLM_P.tif")
 output_file_2 <- file.path(output_folder, "PrGLM_PA.tif")
 
-writeRaster(prRF, filename=output_file_1, format="GTiff")
-writeRaster(prRF > Mean_OptRF, filename=output_file_2, format="GTiff")
+writeRaster(prGLM, filename=output_file_1, format="GTiff")
+writeRaster(prGLM > Mean_OptGLM, filename=output_file_2, format="GTiff")
 
