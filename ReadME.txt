@@ -12,7 +12,7 @@ So when you wanna download species file from GBIF, just run: SEBJ_Download.R
 
 After Download / Or you have downloaded the presence file you need
 
-Please run SEBJ Read to have all your existing data ready
+Please run SEBJ_Read.R to have all your existing data ready
 
 Then you can run BioClim/GLM/MaxEnt/RF for species prediction!
 
