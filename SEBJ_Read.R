@@ -23,6 +23,7 @@ plot(BIO)
 ### PLEASE CHECK THE XLSX FILE ###
 
 juncea <- subset(df, df$speciesKey == 3042751)
+juncea <- subset(juncea, juncea$country == "Sweden")
 
 ### And then, you covert the dataframe to points
 
