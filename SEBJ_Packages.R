@@ -1,0 +1,26 @@
+# You have all your packages ready here!
+library(rgbif)
+library(openxlsx)
+library(ggplot2)
+library(maps)
+library(readxl)
+library(gridExtra)
+library(sp)
+library(terra)
+library(raster)
+library(dismo)
+library(sf)
+library(rJava)
+library(maxnet)
+library(glmnet)
+library(randomForest)
+library(rnaturalearth)
+require(devtools)
+library(sampbias)
+library(rgdal)
+library(mapdata)
+library(rnaturalearthdata)
+
+setwd("C:/Users/xingy/Desktop/WorkfileSEBJ")
+
+folds = 5
