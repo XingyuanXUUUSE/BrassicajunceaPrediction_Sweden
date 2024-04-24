@@ -35,7 +35,8 @@ trGLM
 prGLM <- predict(BIO, glm_eval,type = "response")
 par(mfrow=c(1,2))
 plot(prGLM, main='GLM, regression')
-plot(prGLM > trGLM, main='presence/absence')
+prPGLM <- prGLM > trGLM
+plot(prPGLM, main='presence/absence')
 
 output_folder <- "GLM_Output"
 
@@ -47,5 +48,5 @@ output_file_1 <- file.path(output_folder, "PrGLM_P.tif")
 output_file_2 <- file.path(output_folder, "PrGLM_PA.tif")
 
 writeRaster(prGLM, filename=output_file_1, format="GTiff")
-writeRaster(prGLM > Mean_OptGLM, filename=output_file_2, format="GTiff")
+writeRaster(prPGLM, filename=output_file_2, format="GTiff")
 
