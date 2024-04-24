@@ -31,7 +31,8 @@ Mean_OptMAX
 prMAX <- predict(BIO, maxnet_eval)
 par(mfrow=c(1,2))
 plot(prMAX, main='Maxent Prediction')
-plot(prMAX > Mean_OptMAX, main='presence/absence')
+prPMAX <- prMAX > Mean_OptMAX
+plot(prPMAX, main='presence/absence')
 
 output_folder <- "MaxEnt_Output"
 
@@ -43,4 +44,4 @@ output_file_1 <- file.path(output_folder, "PrMax_P.tif")
 output_file_2 <- file.path(output_folder, "PrMax_PA.tif")
 
 writeRaster(prMAX, filename=output_file_1, format="GTiff")
-writeRaster(prMAX > Mean_OptMAX, filename=output_file_2, format="GTiff")
+writeRaster(prPMAX, filename=output_file_2, format="GTiff")
